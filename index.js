@@ -69,7 +69,7 @@ function gulpPrefixer(prefixText) {
       tinypng(file, function(data) {
         file.contents = data;
         this.push(file);
-        gutil.log('gulp-tingpng: ', gutil.colors.green('✔ ') + file.relative + ' (saved ' + 
+        gutil.log('gulp-tinypng: ', gutil.colors.green('✔ ') + file.relative + ' (saved ' + 
                   prettyBytes(prevLength - data.length) + ' - ' + ((1 - data.length / prevLength) * 100).toFixed(0) + '%)');
         return callback();
       }.bind(this));
